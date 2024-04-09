@@ -4,7 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1> ${city}입니다.</h1>
-<h1> ${address} 입니다.</h1>
+<h1>city : ${city}</h1>
+<h1>address : ${address}</h1>
 </body>
 </html>

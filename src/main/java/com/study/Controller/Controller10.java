@@ -116,7 +116,7 @@ public class Controller10 {
         MyBean102 e1 = new MyBean102();
         MyBean102 e2 = new MyBean102();
         MyBean102 e3 = new MyBean102();
-        
+
         e1.setColor("white");
         e1.setModelName("tesla");
         e1.setPrice(30.50);
@@ -162,22 +162,18 @@ public class Controller10 {
 
     @RequestMapping("sub9")
     public void method9(Model model) {
-        var list = new ArrayList<MyBean104>();
-
         MyBean104 e1 = new MyBean104();
         MyBean104 e2 = new MyBean104();
 
         e1.setCity("부산");
-        e1.setFoods(List.of("어묵","돼지국밥","파전"));
+        e1.setFoods(List.of("국밥", "햄버거", "회"));
 
-        e2.setCity("제주");
-        e2.setFoods(List.of("몸국","감귤","자리물회"));
+        e2.setCity("파리");
+        e2.setFoods(List.of("커피", "바게뜨", "케이크"));
 
-        list.add(e1);
-        list.add(e2);
-        model.addAttribute("data", list);
+        var obj = List.of(e1, e2);
+        model.addAttribute("data", obj);
     }
-
 }
 
 

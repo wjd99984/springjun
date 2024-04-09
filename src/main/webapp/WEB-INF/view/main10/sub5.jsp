@@ -4,24 +4,12 @@
     <title>Title</title>
 </head>
 <body>
-<p>
-<ul>
-    <li>${myList[0].name}</li>
-    <li>${myList[0].address}</li>
-    <li>${myList[0].age}</li>
-</ul>
-</p><p>
-<ul>
-    <li>${myList[1].name}</li>
-    <li>${myList[1].address}</li>
-    <li>${myList[1].age}</li>
-</ul>
-</p><p>
-<ul>
-    <li>${myList[2].name}</li>
-    <li>${myList[2].address}</li>
-    <li>${myList[2].age}</li>
-</ul>
-</p>
+<%--값 1--%>
+<p>${data}</p>
+<p>${requestScope.data}</p>
+<p>${requestScope["data"]}</p>
+
+<p>${requestScope["데이타"]}</p>
+<p>${requestScope["3"]}</p>
 </body>
 </html>

@@ -3,7 +3,7 @@ package com.study.Controller;
 import com.study.domain.MyBean091;
 import com.study.domain.MyBean092;
 import com.study.domain.MyBean093;
-import com.study.domain.Mybean094;
+import com.study.domain.MyBean094;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,7 +50,7 @@ public class Controller09 {
 
     @RequestMapping("sub4")
     public void sub4(Model model) {
-        Mybean094 obj1 = new Mybean094();
+        MyBean094 obj1 = new MyBean094();
         obj1.setModelNumber("k5");
         obj1.setProductPrice(5000);
         obj1.setWeight(2400.50);
@@ -59,4 +59,5 @@ public class Controller09 {
 
         model.addAttribute("car", obj1);
     }
+
 }

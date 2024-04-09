@@ -5,11 +5,11 @@
 </head>
 <body>
 <h1>${names.son}</h1>
-<h1>${names.len}</h1>
+<h1>${names.lee}</h1>
 <h1>${names.kim}</h1>
 <hr>
 <h1>${names["son"]}</h1>
-<h1>${names["len"]}</h1>
+<h1>${names["lee"]}</h1>
 <h1>${names["kim"]}</h1>
 <hr>
 <h1>${others["손흥민"]}</h1>

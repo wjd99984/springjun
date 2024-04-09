@@ -34,8 +34,8 @@ public class Controller08 {
 
     @RequestMapping("sub3")
     public void method3(Model model) {
-        model.addAttribute("name", "흥민");
-        model.addAttribute("age", "45");
+        model.addAttribute("name", "김민재");
+        model.addAttribute("age", 33);
     }
 
     @RequestMapping("sub4")
@@ -89,11 +89,8 @@ public class Controller08 {
 
     @RequestMapping("sub8")
     public void method8(Model model) {
-        List<String> data = List.of("서울", "런던", "뉴옥");
-        model.addAttribute("cities", data);
-        List<Double> numbers = List.of(500.0, 3.14);
-        model.addAttribute("numbers", numbers);
-
+        model.addAttribute("numbers", List.of(500.0, 3.14));
+        model.addAttribute("cities", List.of("서울", "런던", "뉴욕"));
     }
 
     @RequestMapping("sub9")
@@ -109,6 +106,7 @@ public class Controller08 {
 
     @RequestMapping("sub10")
     public void method10(Model model) {
+
         Map<String, String> names = Map.of("son", "토트넘",
                 "lee", "파리",
                 "kim", "뮌헨");
@@ -116,8 +114,10 @@ public class Controller08 {
 
         Map<String, String> others = Map.of(
                 "손흥민", "런던",
-                "lee kang in", "paris"
-        );
+                "lee kang in", "paris");
         model.addAttribute("others", others);
+
+        // 토트넘, 파리, 뮌헨 출력되도록
+        // jsp 작성
     }
 }

@@ -4,6 +4,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>/main7/sub7.jsp 가 응답</h1>
+<h1>/main7/sub7.jsp 가 응답 😊</h1>
 </body>
 </html>

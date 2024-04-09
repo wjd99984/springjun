@@ -58,18 +58,30 @@ public class Controller07 {
         // 요청 경로와 view 이름이 같은 경우가 많음
         return "/main7/sub5";
     }
+
+    // TODO:
+    // /main7/sub6 요청을 처리하는 메소드 작성
     @RequestMapping("sub6")
     public String method6() {
-        // 요청 경로와 view 이름이 같은 경우가 많음
+        // /WEB-INF/view/main7/sub6.jsp 가 응답
+//        return "/main7/sub6";
+        // 요청경로와 같은 view의 이름으로 결정됨
         return null;
+
     }
+
     @RequestMapping("sub7")
-    public String method7() {
-        // 요청 경로와 view 이름이 같은 경우가 많음
-        return null;
+    public void method7() {
+        // 요청 경로와 같은 view의 이름으로 결정됨
+        // view : /WEB-INF/view/main7/sub7.jsp
     }
 
-
+    // TODO: /main7/sub8로 요청왔을 때 일하는 method8 작성, jsp도 작성
+    // 이 메소드는 /WEB-INF/view/main7/sub8.jsp로 포워드 하도록
+    @RequestMapping("sub8")
+    public void method8() {
+        System.out.println("Controller07.method8");
+    }
 
 }
 

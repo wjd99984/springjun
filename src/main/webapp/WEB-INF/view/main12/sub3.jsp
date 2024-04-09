@@ -25,6 +25,8 @@
 </c:forEach>
 
 <hr>
+<h5>구구단 ${dan}단 거꾸로</h5>
+<%-- todo: 거꾸로 출력 *9~ *1--%>
 <c:forEach begin="1" end="9" var="n">
     <p>${dan} X ${10-n} = ${dan * (10-n)}</p>
 </c:forEach>
