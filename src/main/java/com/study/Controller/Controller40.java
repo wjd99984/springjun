@@ -33,7 +33,8 @@ public class Controller40 {
     public void method4() {
         System.out.println("끼얏호우");
     }
-
+    
+//------------
     @GetMapping("/api/someurl3")
     public void method5(@RequestParam("id") Integer id,
                         @RequestParam("name") String name,
@@ -42,6 +43,39 @@ public class Controller40 {
         System.out.println("id = " + id);
         System.out.println("name = " + name);
         System.out.println("email = " + email);
+    }
+    @PostMapping("/api/someurl3")
+    public void method6(
+        @RequestParam("id") Integer id,
+        @RequestParam("city") String city,
+        @RequestParam("country") String country) {
+
+        System.out.println(id);
+        System.out.println(city);
+        System.out.println(country);
+    }
+    
+    //---------
+    
+    @GetMapping("api/someurl4")
+    public void method7(
+            @RequestParam("id") Integer id,
+            @RequestParam("name") String name,
+            @RequestParam("age") Integer age
+    ) {
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(age);
+    }
+    @PostMapping("api/someurl4")
+    public void method8(
+            @RequestParam("id") Integer id,
+            @RequestParam("name") String name,
+            @RequestParam("age") Integer age
+    ) {
+        System.out.println(id);
+        System.out.println(name);
+        System.out.println(age);
     }
 
 }
