@@ -11,59 +11,53 @@
     </style>
 </head>
 <body>
-<h3>새 데이터 입력</h3>
+<h3>데이터 입력</h3>
 <form action="" method="post">
-    <%--    div*6>input[name][value]--%>
     <div>
-        제목
-        <input type="text" name="title" >
+        <input type="text" name="title" value="책 제목!@!@">
     </div>
     <div>
-        이름
-        <input type="text" name="name" >
+        <input type="text" name="name" value="책 저자###">
     </div>
     <div>
-        나이
-        <input type="number" name="age" >
+        <input type="number" name="age" value="55">
     </div>
     <div>
-        가격
-        <input type="number" name="price" value="3.14" step="0.01">
+        <input type="number" name="price" value="345.678" step="0.001">
     </div>
     <div>
-        날짜
-        <input type="date" name="published" value="2024-03-03">
-    </div>
-        <div>
-        날짜시간
-        <input type="text" name="inserted" value="2024-03-03T12:12:12">
+        <input type="date" name="published" value="2000-01-01">
     </div>
     <div>
-        <input type="submit" value="저장">
+        <input type="text" name="inserted" value="1999-12-31T12:30:23">
     </div>
-
+    <div>
+        <input type="submit" value="전송">
+    </div>
 </form>
 <hr>
-<h3>my_table10 자료들</h3>
+
+<h3>my_table10 레코드들</h3>
 <table>
     <thead>
     <tr>
-        <th>이름</th>
-        <th>나이</th>
-        <th>가격</th>
-        <th>날짜</th>
-        <th>날짜시간</th>
+        <th>title</th>
+        <th>name</th>
+        <th>age</th>
+        <th>price</th>
+        <th>published</th>
+        <th>inserted</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${datas}" var="data">
+    <c:forEach items="${list}" var="item">
         <tr>
-            <td>${data.title}</td>
-            <td>${data.name}</td>
-            <td>${data.age}</td>
-            <td>${data.price}</td>
-            <td>${data.published}</td>
-            <td>${data.inserted}</td>
+            <td>${item.title}</td>
+            <td>${item.name}</td>
+            <td>${item.age}</td>
+            <td>${item.price}</td>
+            <td>${item.published}</td>
+            <td>${item.inserted}</td>
         </tr>
     </c:forEach>
     </tbody>

@@ -18,7 +18,7 @@ WHERE FirstName = 'Nancy';
 
 # 모든 레코드 지우기 : WHERE 안쓰면됨
 # 매우 주의!!!
--- SELECT *
--- FROM Employees;
--- DELETE
--- FROM Employees;
+SELECT *
+FROM Employees;
+DELETE
+FROM Employees;

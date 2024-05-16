@@ -84,16 +84,16 @@ public class Controller33 {
     // todo ; 8번째 메소드 작성
     //  my_table10 에 레코드 추가하기
     //  MyBean333 활용
-
     @GetMapping("sub8")
     public void method8() {
         MyBean333 obj = new MyBean333();
-        obj.setTitle("고양이");
-        obj.setName("미상");
-        obj.setAge(19);
-        obj.setPrice(48.500);
-        obj.setPublished(LocalDate.parse("1999-07-21"));
-        obj.setInserted(LocalDateTime.parse("1999-07-21T13:45:35"));
+        obj.setAge(44);
+        obj.setName("손흥민");
+        obj.setInserted(LocalDateTime.now());
+        obj.setPublished(LocalDate.now());
+        obj.setPrice(10000.00);
+        obj.setTitle("토트넘 주장");
+
 
         mapper.insert5(obj);
     }
@@ -115,7 +115,6 @@ public class Controller33 {
         return "redirect:/main33/sub9";
     }
 
-
     @GetMapping("sub10")
     public String select10(Model model) {
         List<MyBean332> list = mapper.select2();
@@ -134,7 +133,6 @@ public class Controller33 {
         return "redirect:/main33/sub10";
     }
 
-
     @GetMapping("sub11")
     public String select11(Model model) {
         List<MyBean332> list = mapper.select2();
@@ -146,17 +144,15 @@ public class Controller33 {
     @PostMapping("sub11")
     public String insert11(MyBean332 data) {
 //        System.out.println("data = " + data);
-        mapper.insert4(data);
+        mapper.insert4(data);mapper.insert4(data);
         return "redirect:/main33/sub11";
     }
 
     // todo; 아래 두 개의 메소드를 잘 수정해서
     //  my_table10 레코드 조회 및 입력 로직 완성
     @GetMapping("sub12")
-    public String select12(Model model) {
-        List<MyBean333> list = mapper.select3();
-        model.addAttribute("datas", list);
-        return "/main33/sub12";
+    public void select12(Model model) {
+        model.addAttribute("list", mapper.select3());
     }
 
     @PostMapping("sub12")
@@ -164,8 +160,5 @@ public class Controller33 {
         mapper.insert5(data);
         return "redirect:/main33/sub12";
     }
-
-
-
 }
 
