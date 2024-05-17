@@ -1,4 +1,4 @@
-package com.study.controller;
+package com.study.Controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
